@@ -1,0 +1,130 @@
+﻿
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Blog Yönetim Paneli</title>
+    <meta name="msapplication-TileColor" content=""/>
+    <meta name="theme-color" content=""/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="MobileOptimized" content="320"/>
+    <!-- CSS files -->
+    <link href="/tabler/dist/css/tabler.min.css?1685973381" rel="stylesheet"/>
+    <link href="/tabler/dist/css/tabler-flags.min.css?1685973381" rel="stylesheet"/>
+    <link href="/tabler/dist/css/tabler-payments.min.css?1685973381" rel="stylesheet"/>
+    <link href="/tabler/dist/css/tabler-vendors.min.css?1685973381" rel="stylesheet"/>
+    <link href="/tabler/dist/css/demo.min.css?1685973381" rel="stylesheet"/>
+    <link href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <style>
+      @@import url('https://rsms.me/inter/inter.css');
+      :root {
+      	--tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+      }
+      body {
+      	font-feature-settings: "cv03", "cv04", "cv11";
+      }
+    </style>
+  </head>
+  <body >   
+    <script src="/tabler/dist/js/demo-theme.min.js?1685973381"></script>
+    <div class="page">
+      <!-- Sidebar -->
+      <aside class="navbar navbar-vertical navbar-expand-lg navbar-transparent">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu" aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <h1 class="navbar-brand navbar-brand-autodark">
+            <a href="/" class="logo"  >
+                        <img src="/assets/images/galle/logo.png" alt="Tabler" class="navbar-brand-image" >
+            </a>
+            </h1>
+        
+          <div class="collapse navbar-collapse" id="sidebar-menu">
+            <ul class="navbar-nav pt-lg-3">
+              <li class="nav-item">
+                <a class="nav-link active" href="/admin" >
+                  <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
+                  </span>
+                  <span class="nav-link-title">Anasayfa</span>
+                </a>
+              </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/admin/products">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                                       <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                                    </svg>
+                                </span>
+                                <span class="nav-link-title">Ürünler</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/admin/menus">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+                                    </svg>
+                                </span>
+                                <span class="nav-link-title">Menü</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/admin/categories">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+                                    </svg>
+                                </span>
+                                <span class="nav-link-title">Kategoriler</span>
+                            </a>
+                        </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <div class="page-wrapper">
+        <!-- Page header -->
+  
+        <!-- Page body -->
+        <div class="page-body">
+          <div class="container-xl">
+              <br />
+          
+          
+                    @RenderBody()
+
+          </div>
+        </div>
+        <footer class="footer footer-transparent d-print-none">
+          <div class="container-xl">
+            <div class="row text-center align-items-center flex-row-reverse">
+        
+              <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+                <ul class="list-inline list-inline-dots mb-0">
+                  <li class="list-inline-item">Copyright &copy; 2023</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+ 
+    <!-- Tabler Core -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/tabler/dist/js/tabler.min.js?1685973381" defer></script>
+    <script src="/tabler/dist/js/demo.min.js?1685973381" defer></script>
+    <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" defer></script>
+    
+    @RenderSection("Script", false)
+    @RenderSection("Scripts", false)
+ 
+  </body>
+</html>

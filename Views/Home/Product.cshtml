@@ -1,0 +1,64 @@
+﻿@model IEnumerable<GalleGurme.Areas.Admin.Models.Products>
+
+<section id="page-title" class="page-title bg-overlay bg-parallax bg-overlay-gradient">
+    <div class="bg-section">
+        <img src="assets/images/galle/falansu.jpg" alt="Background" />
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="title title-1 text-center">
+                    <div class="title--content">
+                        <div class="title--subtitle">Sofralarınızın Vazgeçilmezleri</div>
+                        <div class="title--heading">
+                            <h1>Mağazamızdaki Ürünler</h1>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <div class="divider--shape-1down"></div>
+                </div>
+                <!-- .title end -->
+            </div>
+            <!-- .col-md-12 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+<br />
+
+
+<!-- .container end -->
+</section>
+<div class="menu menu-grid text-center">
+    <div class="container">
+        <div class="row">
+            <div class="dishes-wrapper">
+                <!-- Dish #1 -->
+                @foreach (var item in Model)
+                {
+                    <div class="col-xs-12 col-sm-6 col-md-3 p-0">
+
+
+
+                        <div class="dish-panel">
+                            <div class="dish--content">
+
+                                <h3 class="dish--title">@item.Title</h3>
+                                <div class="divider--shape-4"></div>
+                                <p class="dish--desc">@item.Description</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                }
+                <!-- .col-md-3 end -->
+            </div>
+            <!-- .dishes-wrapper end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</div>

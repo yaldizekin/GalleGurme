@@ -1,0 +1,30 @@
+﻿@{ 
+    Layout = "/Areas/Identity/Pages/_Layout.cshtml";
+}
+<body class="container" style="background-image: url('/app-assets/images/docs/bulut.jpg');">
+    <div style="position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 10px;>
+
+        <h2>Manage your account</h2>
+
+
+    <h4>Change your account settings</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-3">
+            <partial name="_ManageNav" />
+        </div>
+        <div class="col-md-9">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+
+    @RenderSection("Script",false)
+    @RenderSection("Scripts",false)
+
+</body>
+

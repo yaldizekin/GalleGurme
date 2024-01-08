@@ -1,0 +1,74 @@
+﻿@model IEnumerable<GalleGurme.Areas.Admin.Models.Menu>
+
+<section id="page-title" class="page-title bg-overlay bg-parallax bg-overlay-gradient">
+    <div class="bg-section">
+        <img src="assets/images/galle/menu.jpg" alt="Background" />
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="title title-1 text-center">
+                    <div class="title--content">
+                        <div class="title--subtitle">Taze, Lezzetli, Ferah</div>
+                        <div class="title--heading">
+                            <h1>Menümüzü Keşfedin</h1>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <div class="divider--shape-1down"></div>
+                </div>
+                <!-- .title end -->
+            </div>
+            <!-- .col-md-12 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+<section id="menuSimple">
+    <div class="container-fluid pr-0 pl-0 tabs">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="tab-content">
+
+
+                    @foreach (var item in Model)
+                    {
+
+                        <div class="menu-simple">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-21 col-md-12">
+                                        <div class="dish-panel">
+                                            <div class="dish--content">
+
+                                                <div class="dish--content-bio">
+                                                    <h3 class="dish--title">@item.Title</h3>
+                                                    <div class="dish--price">@item.Price</div>
+                                                </div>
+                                                <p class="dish--desc">@item.Description</p>
+
+                                            </div>
+
+
+                                        </div>
+                                    </div><!-- .dish end -->
+                                </div>
+
+                            </div><!-- .container end -->
+                        </div>
+
+
+                        <!-- .tabs-content end -->
+                        <!-- .dish-panel end -->
+                    }
+
+
+                    <!-- .col-md-12 end -->
+                </div>
+                <!-- .row end -->
+            </div>
+            <!-- .container end -->
+        </div>
+</section>
